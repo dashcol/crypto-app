@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto App</title>
+    <link rel="stylesheet" href="crypto.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div>
+        <h1>Crypto Tracker</h1>
+      </div>
+      <div class="homelike">
+        <h4><a>Home</a></h4>
+        <h4><a id="liked-link" href="javascript:void(0)">Liked</a></h4>
+      </div>
+      <div class="search">
+        <input
+          type="text"
+          id="search-box"
+          placeholder="search coins here.."
+          autocomplete="off"
+        />
+        <i class="fas fa-search" id="search-icon"></i>
+        <div class="dialog-box" id="search-dialog">
+          <div class="dialog-contet">
+            <span id="close-dialog" class="close-btn">&times;</span>
+            <h3>Search Results</h3>
+            <ul id="search-results"></ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TABLE -->
+    <table
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        border: 5px;
+      "
+    >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Icon</th>
+          <th>Name</th>
+          <th>
+            Price
+            <i id="sort-price-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-price-desc" class="fas fa-arrow-down"></i>
+          </th>
+          <th>
+            Volume
+            <i id="sort-volume-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-volume-desc" class="fas fa-arrow-down"></i>
+          </th>
+          <th>
+            Market Cap
+            <i id="sort-market-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-market-desc" class="fas fa-arrow-down"></i>
+          </th>
+          <th>Fav</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <div id="pagination-controls">
+      <button id="prev-btn" disabled>Prev</button>
+      <button id="next-btn">Next</button>
+    </div>
+
+    <div></div>
+
+    <script src="crypto.js"></script>
+  </body>
+</html>

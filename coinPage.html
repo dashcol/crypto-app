@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="crypto.css" />
+    <link rel="stylesheet" href="coin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>CoinsDataPage</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div>
+        <h1>Crypto Tracker</h1>
+      </div>
+      <div>
+        <h4><a>Home</a></h4>
+        <h4><a>Liked Coins</a></h4>
+      </div>
+      <div class="search">
+        <input
+          type="text"
+          id="search-box"
+          placeholder="search coins here.."
+          autocomplete="off"
+        />
+        <i class="fas fa-search" id="search-icon"></i>
+        <div class="dialog-box" id="search-dialog">
+          <div class="dialog-contet">
+            <span id="close-dialog" class="close-btn">&times;</span>
+            <h3>Search Results</h3>
+            <ul id="search-results"></ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="left-section">
+        <div>
+          <img id="coin-img" />
+          <h3 id="coin-head"></h3>
+          <p id="coin-desc"></p>
+        </div>
+        <div class="coin-info">
+          <h4 id="coin-rank"></h4>
+          <h4 id="coin-price"></h4>
+          <h4 id="coin-market-cap"></h4>
+        </div>
+        <div id="fav-btn-container">
+          <button id="fav-btn">Fav</button>
+        </div>
+      </section>
+      <section class="right-side">
+        <div class="chart">
+          <button class="btn">24h</button>
+          <button class="btn">30D</button>
+          <button class="btn">3M</button>
+        </div>
+        <canvas id="myChart"></canvas>
+      </section>
+    </div>
+    <script src="coin.js"></script>
+  </body>
+</html>

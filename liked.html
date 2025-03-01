@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="liked.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Favourites</title>
+  </head>
+  <body>
+    <div class="head">
+      <h1>Favourites</h1>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>positon</th>
+          <th>icon</th>
+          <th>Name</th>
+          <th>
+            Price
+            <i id="sort-price-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-price-desc" class="fas fa-arrow-down"></i>
+          </th>
+          <th>
+            Volume
+            <i id="sort-volume-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-volume-desc" class="fas fa-arrow-down"></i>
+          </th>
+          <th>
+            Market Cap
+            <i id="sort-market-asc" class="fas fa-arrow-up"></i>
+            <i id="sort-market-desc" class="fas fa-arrow-down"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="favorites-body">
+     
+      </tbody>
+    </table>
+    <script>
+      const favorites = JSON.parse(sessionStorage.getItem("favorites")) || [];
+      const favoritesBody = document.getElementById("favorites-body");
+
+      favorites.forEach((fav, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td><img src="${fav.image}" alt="${fav.name}" /></td>
+            <td>${fav.name}</td>
+            <td>${fav.price}</td>
+            <td>${fav.volume}</td>
+            <td>${fav.marketCap}</td>
+          `;
+        favoritesBody.appendChild(row);
+      });
+    </script>
+  </body>
+</html>

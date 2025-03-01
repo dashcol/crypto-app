@@ -1,0 +1,177 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+h1,
+h3,
+h4 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0f172a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.homelike {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0f172a;
+}
+.nav-bar h1 {
+  font-size: 24px;
+}
+.nav-bar h4 {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.nav-bar .search {
+  position: relative;
+}
+
+#search-box {
+  padding: 5px 10px;
+  border: 1px solid #64748b;
+  border-radius: 5px;
+  outline: none;
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+#search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  cursor: pointer;
+}
+
+.dialog-box {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #0f172a;
+  border: 1px solid #64748b;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 100;
+  width: 300px;
+}
+.dialog-box h3 {
+  font-size: 16px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+.dialog-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+.dialog-box li {
+  margin: 5px 0;
+  color: #94a3b8;
+}
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: #f87171;
+}
+/* Table */
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background-color: #1e293b;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  background-color: #0f172a;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #334155;
+  cursor: pointer;
+}
+
+td img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.fav-icon {
+  transition: color 0.3s;
+}
+
+.fav-icon:hover {
+  color: #f87171;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0ea5e9;
+  color: #f8fafc;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0284c7;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #64748b;
+  cursor: not-allowed;
+}
+
+#pagination-controls {
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #64748b;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1e293b;
+}
